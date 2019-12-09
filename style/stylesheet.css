@@ -458,14 +458,14 @@ ul {
   color: black;
   font-weight: 300;
 }
-
+/* 
 .promptitem img:hover {
   opacity: 0.5;
   transition: 0.3s;
   box-shadow: 10px 10px #cccccc;
   width: 90%;
 }
-
+ */
 .videothing {
   width: 80%;
   margin: 0 auto;
