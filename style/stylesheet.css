@@ -1,0 +1,467 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+/* HEADER / NAV */
+
+/* De nav staat in een flex en zorgt ervoor dat alle items netjes op hun plek staan. */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 2em;
+}
+
+nav a {
+  text-decoration-line: none;
+  color: black;
+  padding: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+/* Zorgen dat de twee menu items naast mijn naam allebei aan de rechter kant staan */
+
+nav div {
+  display: flex;
+  justify-content: right;
+  font-weight: 100;
+}
+
+/* Meer styling voor de links */
+
+nav a:hover {
+  color: lightcoral;
+}
+
+nav a:active {
+  color: lightcoral;
+  font-weight: 500;
+}
+
+nav h1 {
+  font-size: 2.5rem;
+}
+
+/* GEHELE PAGINA STYLING */
+
+h1,
+h2 {
+  font-weight: 100;
+}
+
+p {
+  font-weight: 300;
+}
+
+/* PROMPTS */
+
+/* de section waar de articles zich in vinden maakt een grid aan */
+
+.prompts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1em;
+  justify-items: stretch;
+  align-items: baseline;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin: 2em;
+}
+
+/* de items in de articles die in de section zitten hebben allemaal een flex voor de vormgeving */
+
+.promptitem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+}
+
+.promptitem img,
+h2,
+p {
+  width: 80%;
+  margin: auto;
+  padding-top: 0.5em;
+}
+
+/* dit image had wat meer styling nodig  */
+
+.cmdlogo {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* voor de responsive screens wordt het grid 1 kolom in plaats van 3 */
+
+@media only screen and (max-width: 600px) {
+  .prompts {
+    grid-template-columns: 1fr;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .promptitem {
+    padding: 3rem;
+  }
+  .promptitem {
+    padding-left: 1.5em;
+  }
+  .cmdlogo {
+    padding-top: 10rem;
+  }
+}
+
+/* CREATIES */
+
+/* CONTAINER STYLE */
+
+.container {
+  width: 60%;
+  margin: auto;
+}
+
+.creatieheader {
+  margin-top: 3em;
+  font-size: 3em;
+  margin-left: 0;
+  margin-bottom: 1em;
+}
+
+.creaties {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.creatieitem {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 6em;
+}
+
+.creatieitem img {
+  width: 100%;
+}
+
+.creatieitem h3 {
+  font-weight: 300;
+  font-size: 2em;
+  padding-top: 0.5em;
+}
+
+.creatieitem p {
+  font-weight: 200;
+  margin-bottom: 0.5em;
+  margin-left: 0;
+}
+
+.creatieitem a {
+  text-decoration: underline;
+  margin-top: 0.2em;
+  font-size: 1em;
+  color: black;
+}
+
+.creaties a:hover,
+a:active {
+  color: lightcoral;
+}
+
+/* TOOLBOX */
+
+.toolboxheader {
+  margin-top: 0.5rem;
+  font-size: 3em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.toolbox {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.toolbox div {
+  text-align: center;
+  padding: 2em;
+}
+
+.toolbox div img {
+  padding: 2.5em;
+  padding-bottom: 1em;
+}
+
+/* mediaquerie voor dit */
+
+@media only screen and (max-width: 1020px) {
+  .toolbox {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* CONTACT */
+
+.contactstuk h2 {
+  margin-top: 6rem;
+  font-size: 3em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.contactstuk {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3em;
+  justify-items: stretch;
+}
+
+.contact article {
+  text-align: center;
+  padding: 1em;
+}
+
+@media only screen and (max-width: 1020px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-items: stretch;
+  }
+}
+
+/* FOOTER STUK */
+
+footer {
+  margin-top: 5em;
+  background-color: black;
+  color: white;
+  padding: 2em;
+}
+
+.footywoo {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 3em;
+  padding-top: 3em;
+  padding-left: 0;
+}
+
+footer h4 {
+  margin-top: 0.5rem;
+  margin-left: 0;
+  margin-bottom: 1em;
+  font-size: 1em;
+}
+
+footer a {
+  text-decoration-line: none;
+  color: white;
+}
+
+footer ul {
+  list-style: none;
+  width: 100%;
+  padding-top: 0.3em;
+  padding-bottom: 1em;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer a:active {
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 1020px) {
+  .footywoo {
+    display: flex;
+    flex-direction: column;
+    justify-items: stretch;
+  }
+}
+
+.copyright {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+/* CV PAGINA */
+
+.cvpagina {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.cvfoto {
+  width: 80%;
+  border: solid black;
+  border-width: 20px;
+  padding: 2em;
+}
+
+.cvheader {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+/* DETAIL PAGINA  */
+
+.contentblokje h1 {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 2em;
+  font-weight: 200;
+}
+
+.contentblokje h2 {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.5em;
+  font-weight: 200;
+}
+
+.contentblokje img {
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.contentblokje h3 {
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: 400;
+  margin: 0 auto;
+  margin-top: 1.5em;
+}
+
+.contentblokje p {
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1em;
+  font-weight: 300;
+  margin: 0 auto;
+}
+
+.contentblokje p:last-of-type {
+  margin-bottom: 3rem;
+}
+
+.contentblokje a > p {
+  color: white;
+  background-color: black;
+  padding: 0.5em;
+  margin: 0 auto;
+  text-decoration-line: none;
+  font-weight: 300;
+  text-align: center;
+}
+
+.downloadthisstuff:hover {
+  text-decoration-line: underline;
+  color: lightcoral;
+}
+
+.downloadthisstuff:active {
+  color: lightcoral;
+  font-weight: 500;
+}
+
+/* COMPETENTIEPAGINA */
+
+.headercomp {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.artcomp {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.artcomp h2 {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+
+.artcomp h3 {
+  font-size: 1.2em;
+  font-weight: 500;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.artcomp p,
+ul {
+  font-size: 1em;
+  font-weight: 300;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.artcomp li {
+  margin: 0 auto;
+  padding-top: 0.5em;
+}
+
+.artcomp ul {
+  list-style: none;
+  display: block;
+  margin-bottom: 1em;
+}
+
+.artcomp ul > li {
+  background-image: url(bulletpoint.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 1.7em;
+  padding-left: 3em;
+  padding-bottom: 0.5em;
+}
+
+.uitlegp {
+  background-color: #aceade;
+  padding: 1.5em;
+  margin: 0.5em;
+  margin-top: 1.5em;
+}
+
+.snelledoorlink {
+  color: black;
+  font-weight: 300;
+}
+
+.promptitem img:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+  box-shadow: 10px 10px #cccccc;
+  width: 90%;
+}
