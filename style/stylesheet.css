@@ -72,7 +72,7 @@ p {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 1em;
   justify-items: stretch;
-  align-items: baseline;
+/*   align-items: baseline; */
   padding-top: 25px;
   padding-bottom: 25px;
   margin: 2em;
